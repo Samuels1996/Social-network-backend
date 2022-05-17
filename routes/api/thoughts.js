@@ -6,3 +6,12 @@ const {
     createThought,
     deleteThought
 } = require('../../controllers/thoughtController');
+
+router
+  .route('/:thoughtId')
+  .get(getThoughts)
+  .get(getOneThought)
+  .put(createThought)
+  .delete(deleteThought);
+
+module.exports = router;
