@@ -6,11 +6,7 @@ const db = require('./config/connection');
 const cwd = process.cwd();
 
 const app = express();
-const PORT = processs.env.PORT || 3001;
-
-const activity = cwd.includes('01-Activities')
-    ? cwd.split('/01-Activites/')[1]
-    : cwd;
+const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
